@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, FlatList, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, FlatList, Image, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { deleteEntry } from '../redux/slice';
@@ -28,7 +28,6 @@ export default function Registrations() {
 
     const entries = useSelector((state) => state.RegistrationForm);
     const Item = ({ id, name, dob, employeeId }) => (
-        
         <View style={styles.box}>
             <View style={{ flexDirection: 'row', marginBottom: '2%' }}>
                 <Text style={styles.fieldName}>Name: </Text>
